@@ -1,38 +1,36 @@
-﻿# How to run the code:
+﻿## Restaurant Recommendation System Implementation using Matrix Factorization-based and Deep Learning-based Model
+Final Project SDSC3002 Data Mining - Grade: 95/100
+- Lecturer: Dr. YANG Yu
+- City University of Hong Kong
 
-Please open this README file in [StackEdit](https://stackedit.io/app#) 
+### Authors
+This project was created by:
+ - ABDINEGARA, Beatrice
+ - GUSTAF, Benedict Ronaldo
+ - HA, Quang Minh
+ - YENNOTO, Keane Dylan
+> Detailed report about this project can be seen at  'Report_SDSC3002 Data Mining.pdf'
 
- 1. Within StackEdit click the StackEdit logo on the top right coner, a side bar should pop-up
- 2. Scroll down to Import/Export
- 3. Click Import Markdown and choose this current file
- 4. View the file from StackEdit
-	
-This code is written in Python language, through Jupyter Notebook. 
+### Requirements
+These packages can be installed using pip by running the following command:
 
-The submitted code is already been in clean state, running from top to bottom works as intended.
+```
+pip install -r requirements.txt
+```
 
-so in general, the output of the code will be automatically shown in the
-Jupyter Notebook. 
+### Notebooks
 
-However, if you would like to run the code again 
-from the beginning, the way to do it is:
+The notebooks should be run in the following order:
 
-1. Open the OneDrive link: 
-https://portland-my.sharepoint.com/:f:/g/personal/dkyennoto2-c_my_cityu_edu_hk/EsoI4CVaCy9Hsn-60brXEiMBZiYlns7LJnYrkAVuqEg7JQ?e=T76VAc
+1. `data_clean_preprocess.ipynb`: Preprocesses the raw data and saves the preprocessed data to a CSV file.
+2. `matrix_factorization_models.ipynb`: Implements and evaluates three matrix factorization models: SVD, SVD++, and NMF.
+3. `deep_learning.ipynb`: Implements and evaluates a deep learning-based model using FastAI.
+4. `get_top_k_recommendations.ipynb`: Generates top-k recommendations for a given user based on the best-performing model.
 
-2. Download all the files within the OneDrive link
-3. No need for changes in the path of the files. All the files need to be in one folder  
+### Flowchart
 
-4. Type pip install -r requirements.txt on the terminal
-5. You now can start running the notebooks (refer to the flowchart below of the execution order)
-6. Quick start guide on running JupyterNotebooks
-	a. To run each cell one by one, you can click "Run" button on the top menu under "Cell" menu
-	
-	b. Or to run all and generate output of all cells, simply click "Kernel" on the top menu, then click "Restart & 	  Run All"
-	
-	c. Wait for each cell to be executed
+The following flowchart illustrates the data processing pipeline and the relationships between the notebooks:
 
-###  Flowchart
 ```mermaid
 graph TD
 start((start))-->data_clean(data_clean_preprocess.ipynb)
@@ -56,4 +54,3 @@ business_id[/business_id_with_num_id_complete.csv/]
 business_id --> ktop
 
 ```
-
